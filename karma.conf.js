@@ -61,10 +61,11 @@ module.exports = function(config) {
       whitelist: [path.join(conf.paths.src, '/**/!(*.html|*.spec|*.mock).js')]
     },
 
-    browsers : ['PhantomJS'],
+    browsers : ['Chrome'],
 
     plugins : [
       'karma-phantomjs-launcher',
+      'karma-chrome-launcher',
       'karma-angular-filesort',
       'karma-coverage',
       'karma-jasmine',
@@ -80,7 +81,8 @@ module.exports = function(config) {
 
     proxies: {
       '/assets/': path.join('/base/', conf.paths.src, '/assets/')
-    }
+    },
+    port: 9875
   };
 
   // This is the default preprocessors configuration for a usage with Karma cli
