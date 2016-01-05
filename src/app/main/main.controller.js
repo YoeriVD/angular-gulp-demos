@@ -2,7 +2,7 @@
     'use strict';
 
     function MainController() {
-        var vm = this;
+        var vm = this; //nice trick to be sure what "this" actually is.
         vm.name = "world"
         vm.newContact = {}
         vm.contacts = [
