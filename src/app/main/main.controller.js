@@ -2,10 +2,9 @@
     'use strict';
 
     function MainController() {
-        var vm = this; //nice trick to be sure what "this" actually is.
-        vm.name = "world"
-        vm.newContact = {}
-        vm.contacts = [
+        this.name = "world"
+        this.newContact = {}
+        this.contacts = [
             {
                 firstName: 'Frank',
                 surname: 'Muscles',
