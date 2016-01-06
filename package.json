@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "dependencies": {},
   "scripts": {
-    "postinstall": "bower install",
+    "postinstall": "bower install && tsd install",
     "test": "gulp test"
   },
   "devDependencies": {
