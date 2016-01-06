@@ -2,7 +2,7 @@ describe('Directive: feedback', function () {
     var $scope, $compile, $window;
 
     beforeEach(function () {
-        module('datepickerApp.directives');
+        module('angularGulpDemos.directives');
         inject(function (_$compile_, _$window_, $rootScope) {
             $compile = _$compile_;
             $window = _$window_;

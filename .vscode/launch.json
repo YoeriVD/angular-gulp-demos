@@ -13,7 +13,7 @@
 			"request": "launch",
 			"url": "http://localhost/mypage.html",
 			"sourceMaps": true,
-			"webRoot": "wwwroot"
+			"webRoot": "app"
 		},
 		{
 			"name": "Attach",

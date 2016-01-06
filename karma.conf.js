@@ -44,9 +44,9 @@ module.exports = function(config) {
   var configuration = {
     files: listFiles(),
 
-    singleRun: true,
+    singleRun: false,
 
-    autoWatch: false,
+    autoWatch: true,
 
     ngHtml2JsPreprocessor: {
       stripPrefix: conf.paths.src + '/',
@@ -61,7 +61,7 @@ module.exports = function(config) {
       whitelist: [path.join(conf.paths.src, '/**/!(*.html|*.spec|*.mock).js')]
     },
 
-    browsers : ['Chrome'],
+    browsers : ['PhantomJS'],
 
     plugins : [
       'karma-phantomjs-launcher',
