@@ -12,7 +12,7 @@ describe('Directive: feedback', function () {
         });
     });
 
-    it('should send feedback to a web service', function () {
+    xit('should send feedback to a web service', function () {
         // Arrange
         var element = $compile('<feedback></feedback>')($scope);
         var isolateScope = element.isolateScope();
@@ -25,7 +25,7 @@ describe('Directive: feedback', function () {
         expect($window.alert).toHaveBeenCalled();
     });
 
-    it('should support printing feedback to the console', function () {
+    xit('should support printing feedback to the console', function () {
         // Arrange
         var element = $compile('<feedback debug></feedback>')($scope);
         var isolateScope = element.isolateScope();
@@ -33,6 +33,32 @@ describe('Directive: feedback', function () {
         // Act
         isolateScope.feedback = { type: 'positive', message: 'super' };
         isolateScope.sendFeedback();
+ 
+        // Assert
+        expect($window.alert).not.toHaveBeenCalled();
+    });
+    
+    it('should send feedback to a web service (controller as)', function () {
+        // Arrange
+        var element = $compile('<feedback></feedback>')($scope);
+        var controller = element.controller("feedback");
+ 
+        // Act
+        controller.feedback = { type: 'positive', message: 'super' };
+        controller.sendFeedback();
+ 
+        // Assert
+        expect($window.alert).toHaveBeenCalled();
+    });
+
+    it('should support printing feedback to the console (controller as)', function () {
+        // Arrange
+        var element = $compile('<feedback debug></feedback>')($scope);
+        var controller = element.controller("feedback");
+ 
+        // Act
+        controller.feedback = { type: 'positive', message: 'super' };
+        controller.sendFeedback();
  
         // Assert
         expect($window.alert).not.toHaveBeenCalled();

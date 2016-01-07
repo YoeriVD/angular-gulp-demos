@@ -62,7 +62,7 @@
                 },
                 controller: FeedbackController,
                 controllerAs: "ctrl",
-                bindToController: true,
+                bindToController: true
             };
         });
 
@@ -79,6 +79,6 @@
             this.$window.alert('Currently not supported');
         }
         this.feedback = null
-    };
+    }
 
 })()
