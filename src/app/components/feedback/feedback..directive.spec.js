@@ -11,7 +11,7 @@ describe('Directive: feedback', function () {
             spyOn($window, 'alert');
         });
     });
-
+    //prefix with 'x' to ignore a test
     xit('should send feedback to a web service', function () {
         // Arrange
         var element = $compile('<feedback></feedback>')($scope);
@@ -24,7 +24,8 @@ describe('Directive: feedback', function () {
         // Assert
         expect($window.alert).toHaveBeenCalled();
     });
-
+    
+    //prefix with 'x' to ignore a test
     xit('should support printing feedback to the console', function () {
         // Arrange
         var element = $compile('<feedback debug></feedback>')($scope);
